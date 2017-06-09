@@ -1,0 +1,95 @@
+class yea_base_parameters definition
+  public
+  create public .
+
+  public section.
+
+    interfaces yea_parameters .
+
+    data _params type ztt_ea_key_values .
+
+    methods constructor
+      importing
+        !uri_arguments type string optional
+        !uri_request   type string optional .
+  protected section.
+  private section.
+endclass.
+
+
+
+class yea_base_parameters implementation.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_PARAMETERS->CONSTRUCTOR
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] URI_ARGUMENTS                  TYPE        STRING(optional)
+* | [--->] URI_REQUEST                    TYPE        STRING(optional)
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method constructor.
+    split uri_arguments at '/' into table data(_args).
+    split uri_request at '/' into table data(_vals).
+    data(index) = 0.
+    loop at _args assigning field-symbol(<arg>).
+
+      index = index + 1.
+
+      read table _vals index index assigning field-symbol(<val>).
+      if ( sy-subrc <> 0 ).
+        continue.
+      endif.
+
+      if ( strlen( <arg> ) > 0 and <arg>+0(1) = ':' ).
+        append value yea_key_value(
+          key = <arg>
+          value = <val>
+        ) to me->_params.
+      endif.
+
+    endloop.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_PARAMETERS->YEA_PARAMETERS~GET
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] PARAMETER                      TYPE        STRING
+* | [<-()] RETURNING                      TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_parameters~get.
+    try.
+        returning = _params[ key = parameter ]-value.
+      catch cx_root.
+    endtry.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_PARAMETERS->YEA_PARAMETERS~HAS
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] PARAMETER                      TYPE        STRING
+* | [<-()] RETURNING                      TYPE        ABAP_BOOL
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_parameters~has.
+    try.
+        data(ok) = _params[ key = parameter ]-value.
+        returning = abap_true.
+      catch cx_root.
+    endtry.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_PARAMETERS->YEA_PARAMETERS~LIST
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        STRINGTAB
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_parameters~list.
+    data params type stringtab.
+    loop at _params assigning field-symbol(<p>).
+      append <p>-value to returning.
+    endloop.
+  endmethod.
+endclass.
+

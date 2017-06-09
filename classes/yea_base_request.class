@@ -1,0 +1,186 @@
+class yea_base_request definition
+  public
+  final
+  create public .
+
+  public section.
+
+    interfaces yea_request .
+
+    methods constructor
+      importing
+        !sap_request  type ref to if_http_request
+        !service_root type string .
+    methods set_params
+      importing
+        !params type ref to yea_parameters .
+    methods set_query
+      importing
+        !query type ref to yea_query .
+  protected section.
+  private section.
+
+    data _sap_request type ref to if_http_request .
+    data _method type string .
+    data _content_type type string .
+    data _headers type ztt_ea_key_values .
+    data _path type string .
+    data _accept type string.
+    data _query type ref to yea_query .
+    data _root type string .
+    data _params type ref to yea_parameters .
+endclass.
+
+
+
+class yea_base_request implementation.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->CONSTRUCTOR
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] SAP_REQUEST                    TYPE REF TO IF_HTTP_REQUEST
+* | [--->] SERVICE_ROOT                   TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method constructor.
+
+    " Prevent null ptr
+    _params = new yea_base_parameters( ).
+
+    data headers type tihttpnvp.
+    sap_request->get_header_fields( changing fields = headers ).
+
+    try.
+        _path = headers[ name = '~request_uri' ]-value.
+        replace first occurrence of service_root in _path with ''.
+      catch cx_root.
+    endtry.
+
+    try.
+        _accept = headers[ name = 'accept' ]-value.
+      catch cx_root.
+    endtry.
+
+    data query_url type string.
+    try.
+        query_url = headers[ name = '~query_string' ]-value.
+      catch cx_root.
+    endtry.
+    me->_query = new yea_base_query( query_url ).
+
+    _method = sap_request->get_method( ).
+    _sap_request = sap_request.
+    _content_type = sap_request->get_content_type( ).
+    _root = service_root.
+
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->SET_PARAMS
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] PARAMS                         TYPE REF TO YEA_PARAMETERS
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method set_params.
+    _params = params.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->SET_QUERY
+* +-------------------------------------------------------------------------------------------------+
+* | [--->] QUERY                          TYPE REF TO YEA_QUERY
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method set_query.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~ACCEPT
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~accept.
+    returning = me->_accept.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~BODY
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~body.
+    returning = me->_sap_request->get_cdata( ).
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~CONTENT_TYPE
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~content_type.
+    returning = _content_type.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~METHOD
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~method.
+    returning = me->_method.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~PARAMETERS
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE REF TO YEA_PARAMETERS
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~parameters.
+    returning = _params.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~PATH
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~path.
+    returning = me->_path.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~QUERY
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE REF TO YEA_QUERY
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~query.
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~RAW
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        XSTRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~raw.
+    returning = _sap_request->get_raw_message( ).
+  endmethod.
+
+
+* <SIGNATURE>---------------------------------------------------------------------------------------+
+* | Instance Public Method YEA_BASE_REQUEST->YEA_REQUEST~ROOT
+* +-------------------------------------------------------------------------------------------------+
+* | [<-()] RETURNING                      TYPE        STRING
+* +--------------------------------------------------------------------------------------</SIGNATURE>
+  method yea_request~root.
+    returning = _root.
+  endmethod.
+endclass.
+

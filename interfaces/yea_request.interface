@@ -1,0 +1,34 @@
+interface yea_request
+  public .
+
+
+  methods method
+    returning
+      value(returning) type string .
+  methods content_type
+    returning
+      value(returning) type string .
+  methods headers .
+  methods accept
+    returning
+      value(returning) type string.
+  methods body
+    returning
+      value(returning) type string .
+  methods raw
+    returning
+      value(returning) type xstring .
+  methods path
+    returning
+      value(returning) type string .
+  methods query
+    returning
+      value(returning) type ref to yea_query .
+  methods parameters
+    returning
+      value(returning) type ref to yea_parameters .
+  methods root
+    returning
+      value(returning) type string .
+endinterface.
+
