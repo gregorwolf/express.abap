@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>YEA_HTTP</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>100</MSGNR>
+     <TEXT>Continue</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>101</MSGNR>
+     <TEXT>Switching protocols</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>102</MSGNR>
+     <TEXT>Processing</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>200</MSGNR>
+     <TEXT>Ok</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>201</MSGNR>
+     <TEXT>Created</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>202</MSGNR>
+     <TEXT>Accepted</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>203</MSGNR>
+     <TEXT>Non-Authoritative Information</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>204</MSGNR>
+     <TEXT>No Content</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>205</MSGNR>
+     <TEXT>Reset Content</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>206</MSGNR>
+     <TEXT>Partial Content</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>207</MSGNR>
+     <TEXT>Multi-Status</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>208</MSGNR>
+     <TEXT>Already Reported</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>226</MSGNR>
+     <TEXT>IM Used</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>300</MSGNR>
+     <TEXT>Multiple choices</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>301</MSGNR>
+     <TEXT>Moved Permanently</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>302</MSGNR>
+     <TEXT>Found</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>303</MSGNR>
+     <TEXT>See Other</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>304</MSGNR>
+     <TEXT>Not Modified</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>305</MSGNR>
+     <TEXT>Use Proxy</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>306</MSGNR>
+     <TEXT>Switch Proxy</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>307</MSGNR>
+     <TEXT>Temporary Redirect</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>308</MSGNR>
+     <TEXT>Permanent Redirect</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>400</MSGNR>
+     <TEXT>Bad request</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>401</MSGNR>
+     <TEXT>Unauthorized</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>402</MSGNR>
+     <TEXT>Payment required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>403</MSGNR>
+     <TEXT>Forbidden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>404</MSGNR>
+     <TEXT>Not found</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>405</MSGNR>
+     <TEXT>Method not allowed</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>406</MSGNR>
+     <TEXT>Not acceptable</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>407</MSGNR>
+     <TEXT>Proxy authentication required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>408</MSGNR>
+     <TEXT>Request timeout</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>409</MSGNR>
+     <TEXT>Conflict</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>410</MSGNR>
+     <TEXT>Gone</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>411</MSGNR>
+     <TEXT>Length required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>412</MSGNR>
+     <TEXT>Precondition failed</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>413</MSGNR>
+     <TEXT>Payload too large</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>414</MSGNR>
+     <TEXT>URI too long</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>415</MSGNR>
+     <TEXT>Unsupported media type</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>416</MSGNR>
+     <TEXT>Range Not Satisfiable</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>417</MSGNR>
+     <TEXT>Expectation Failed</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>418</MSGNR>
+     <TEXT>I&apos;m a teapot</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>421</MSGNR>
+     <TEXT>Misdirected Request</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>422</MSGNR>
+     <TEXT>Unprocessable Entity</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>423</MSGNR>
+     <TEXT>Locked</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>424</MSGNR>
+     <TEXT>Failed Dependency</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>426</MSGNR>
+     <TEXT>Upgrade Required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>428</MSGNR>
+     <TEXT>Precondition Required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>429</MSGNR>
+     <TEXT>Too Many Requests</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>431</MSGNR>
+     <TEXT>Request Header Fields Too Large</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>451</MSGNR>
+     <TEXT>Unavailable For Legal Reasons</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>500</MSGNR>
+     <TEXT>Internal server error</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>501</MSGNR>
+     <TEXT>Not implemented</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>502</MSGNR>
+     <TEXT>Bad gateway</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>503</MSGNR>
+     <TEXT>Service unavaliable</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>504</MSGNR>
+     <TEXT>Gateway timeout</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>505</MSGNR>
+     <TEXT>HTTP version not supported</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>506</MSGNR>
+     <TEXT>Variant also negotiates</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>507</MSGNR>
+     <TEXT>Insufficient storage</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>508</MSGNR>
+     <TEXT>Loop detected</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>510</MSGNR>
+     <TEXT>Not extended</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YEA_HTTP</ARBGB>
+     <MSGNR>511</MSGNR>
+     <TEXT>Network authentication required</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>
