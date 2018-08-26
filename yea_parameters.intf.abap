@@ -14,4 +14,3 @@ interface yea_parameters
     returning
       value(returning) type stringtab .
 endinterface.
-

@@ -16,4 +16,3 @@ interface yea_query
     returning
       value(returning) type stringtab .
 endinterface.
-

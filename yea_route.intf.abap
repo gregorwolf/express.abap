@@ -7,4 +7,3 @@ interface yea_route
     returning
       value(returning) type abap_bool .
 endinterface.
-

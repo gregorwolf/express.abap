@@ -100,4 +100,3 @@ interface yea_service
     returning
       value(returning) type string .
 endinterface.
-
