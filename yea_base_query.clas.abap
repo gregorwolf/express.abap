@@ -38,4 +38,21 @@ CLASS YEA_BASE_QUERY IMPLEMENTATION.
       endif.
     endloop.
   endmethod.
+
+
+  method YEA_QUERY~GET.
+    try.
+      returning = _keys[ key = argument ]-value.
+    catch cx_root.
+    endtry.
+  endmethod.
+
+
+  method YEA_QUERY~HAS.
+    try.
+      data(found) = _keys[ key = argument ].
+      returning = abap_true.
+    catch cx_root.
+    endtry.
+  endmethod.
 ENDCLASS.

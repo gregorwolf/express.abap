@@ -14,7 +14,7 @@ public section.
   constants MIDDLEWARE_USE type STRING value 'USE' ##NO_TEXT.
   constants URL_SPLIT type C value '/' ##NO_TEXT.
   constants WILDCARD type C value '*' ##NO_TEXT.
-  constants URL_RGX type STRING value '([a-zA-Z0-9\._\[\]@!$''"\(\)\*\+,;:=~`]+)' ##NO_TEXT.
+  constants URL_RGX type STRING value '([a-zA-Z0-9\._\[\]@!%$''"\(\)\*\+,;:=~`]+)' ##NO_TEXT.
   constants METHOD_COPY type STRING value 'COPY' ##NO_TEXT.
   constants METHOD_OPTIONS type STRING value 'OPTIONS' ##NO_TEXT.
   constants METHOD_LINK type STRING value 'LINK' ##NO_TEXT.

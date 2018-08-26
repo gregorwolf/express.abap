@@ -6,7 +6,7 @@ public section.
 
   interfaces YEA_PARAMETERS .
 
-  data _PARAMS type ZTT_EA_KEY_VALUES .
+  data _PARAMS type YEA_KEY_VALUES .
 
   methods CONSTRUCTOR
     importing
@@ -37,7 +37,7 @@ CLASS YEA_BASE_PARAMETERS IMPLEMENTATION.
       if ( strlen( <arg> ) > 0 and <arg>+0(1) = ':' ).
         append value yea_key_value(
           key = <arg>
-          value = <val>
+          value = cl_http_utility=>if_http_utility~unescape_url( <val> )
         ) to me->_params.
       endif.
 

@@ -115,7 +115,7 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
     endtry.
     data(root_regex) = '^' && me->root( ).
     replace first occurrence of regex root_regex in path with ''.
-    path = cl_http_utility=>if_http_utility~unescape_url( path ).
+
     data(method) = server->request->get_method( ).
     if ( _method_allowed( method ) = abap_false ).
       rs->set_status( 405 )->end( ).
@@ -123,6 +123,7 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
     endif.
 
     data(matched_routes) = _match_paths( path = path method = method ).
+*    path = cl_http_utility=>if_http_utility~unescape_url( path ).
     read table matched_routes transporting no fields with key method = method.
     if ( sy-subrc <> 0 and lines( matched_routes ) = 0 ).
       rs->set_status( 404 )->end( ).

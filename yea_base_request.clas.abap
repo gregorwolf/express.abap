@@ -23,7 +23,7 @@ private section.
   data _SAP_REQUEST type ref to IF_HTTP_REQUEST .
   data _METHOD type STRING .
   data _CONTENT_TYPE type STRING .
-  data _HEADERS type ZTT_EA_KEY_VALUES .
+  data _HEADERS type YEA_KEY_VALUES .
   data _PATH type STRING .
   data _accept type string.
   data _QUERY type ref to YEA_QUERY .
@@ -76,6 +76,7 @@ CLASS YEA_BASE_REQUEST IMPLEMENTATION.
 
 
   method SET_QUERY.
+    _query = query.
   endmethod.
 
 
@@ -110,6 +111,7 @@ CLASS YEA_BASE_REQUEST IMPLEMENTATION.
 
 
   method YEA_REQUEST~QUERY.
+    returning = _query.
   endmethod.
 
 
