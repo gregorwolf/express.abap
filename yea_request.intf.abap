@@ -8,10 +8,12 @@ interface YEA_REQUEST
   methods CONTENT_TYPE
     returning
       value(RETURNING) type STRING .
-  methods HEADERS .
+  methods HEADERS
+    returning
+      value(RETURNING) type YEA_KEY_VALUES .
   methods ACCEPT
     returning
-        value(returning) type string.
+      value(RETURNING) type STRING .
   methods BODY
     returning
       value(RETURNING) type STRING .

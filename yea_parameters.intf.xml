@@ -11,6 +11,26 @@
     <STATE>1</STATE>
     <UNICODE>X</UNICODE>
    </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_PARAMETERS</CLSNAME>
+     <CMPNAME>GET</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get URI parameter by name (must include &apos;:&apos;, e.g. &apos;:name&apos;)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_PARAMETERS</CLSNAME>
+     <CMPNAME>HAS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check if parameter is available</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_PARAMETERS</CLSNAME>
+     <CMPNAME>LIST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get a list of all the parameters</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

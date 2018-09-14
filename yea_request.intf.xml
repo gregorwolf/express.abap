@@ -11,6 +11,68 @@
     <STATE>1</STATE>
     <UNICODE>X</UNICODE>
    </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>ACCEPT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get the &apos;Accept&apos; header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>BODY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get the body of the HTTP request</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>CONTENT_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get the &apos;Content-type&apos; header</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>HEADERS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get a table of all the headers</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>METHOD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get the HTTP method used</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>PARAMETERS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get reference to URI parameters (/my/:param/there)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>PATH</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get the URI that was requested</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>QUERY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get reference to query parameters (?arg1=0&amp;arg2=1)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>RAW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get the binary data of the HTTP request</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_REQUEST</CLSNAME>
+     <CMPNAME>ROOT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get the path of the SICF service</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

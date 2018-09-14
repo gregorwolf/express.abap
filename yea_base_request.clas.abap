@@ -67,6 +67,10 @@ CLASS YEA_BASE_REQUEST IMPLEMENTATION.
     _content_type = sap_request->get_content_type( ).
     _root = service_root.
 
+    loop at headers assigning field-symbol(<header>).
+      append value #( key = <header>-name value = <header>-value ) to _headers.
+    endloop.
+
   endmethod.
 
 
@@ -92,6 +96,11 @@ CLASS YEA_BASE_REQUEST IMPLEMENTATION.
 
   method YEA_REQUEST~CONTENT_TYPE.
     returning = _content_type.
+  endmethod.
+
+
+  method yea_request~headers.
+    returning = _headers.
   endmethod.
 
 

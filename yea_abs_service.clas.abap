@@ -49,6 +49,7 @@ private section.
 
   data _ROUTES type YEA_INTL_ROUTES .
   data _ALLOWED type STRINGTAB .
+  data _TRACE type STRINGTAB .
 
   methods _PREPARE_REQUEST
     importing
@@ -104,6 +105,7 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
 
 
   method if_http_extension~handle_request.
+    clear: _trace.
     data(rq) = _prepare_request( server->request ).
     data(rs) = _prepare_response( server->response ).
     data headers type tihttpnvp.
@@ -123,7 +125,6 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
     endif.
 
     data(matched_routes) = _match_paths( path = path method = method ).
-*    path = cl_http_utility=>if_http_utility~unescape_url( path ).
     read table matched_routes transporting no fields with key method = method.
     if ( sy-subrc <> 0 and lines( matched_routes ) = 0 ).
       rs->set_status( 404 )->end( ).
@@ -132,9 +133,8 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
       rs->set_status( 405 )->end( ).
       return.
     endif.
-    data(cast_server) = cast cl_http_server( server ).
+
     loop at matched_routes assigning field-symbol(<route>).
-      " Prepare Arguments and change in request
       data(cast_request) = cast yea_base_request( rq ).
       cast_request->set_params(
         new yea_base_parameters(
@@ -142,8 +142,9 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
           uri_request = path
         )
       ).
-      "cast_request->set_query( new yea_base_query( '' ) ).
       data(do_next) = <route>-impl->execute( request = rq response = rs ).
+      data(cl_def) = cl_abap_typedescr=>describe_by_object_ref( <route>-impl ).
+      append |['{ <route>-method }','{ <route>-path }','{ cl_def->get_relative_name( ) }']| to _trace.
       if ( do_next = abap_false ).
         if ( rs->finished( ) = abap_false ).
           rs->set_status( 400 )->end( ).
@@ -279,6 +280,11 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
   endmethod.
 
 
+  method yea_service~trace.
+    returning = _trace.
+  endmethod.
+
+
   method yea_service~unlink.
     append value yea_intl_route(
       path = path
@@ -345,7 +351,8 @@ CLASS YEA_ABS_SERVICE IMPLEMENTATION.
       data(rt_regex) = _path_to_regex( <route>-path ).
 
       " Exact Matches
-      if ( <route>-path = in_path and <route>-method = method ).
+      if ( <route>-path = in_path and ( <route>-method = method or
+                                        <route>-method = yea_const=>middleware_use ) ).
         append <route> to matching.
         continue.
       elseif ( <route> is not initial and ( <route>-method = method or

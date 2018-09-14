@@ -1,102 +1,109 @@
-interface yea_service
+interface YEA_SERVICE
   public .
-  methods use
+
+
+  interfaces IF_HTTP_EXTENSION .
+
+  methods USE
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods get
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods GET
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods head
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods HEAD
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods post
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods POST
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods put
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods PUT
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods delete
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods DELETE
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods patch
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods PATCH
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods copy
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods COPY
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods options
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods OPTIONS
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods link
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods LINK
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods unlink
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods UNLINK
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods purge
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods PURGE
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods lock
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods LOCK
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods unlock
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods UNLOCK
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods propfind
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods PROPFIND
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods view
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods VIEW
     importing
-      !path            type string
-      !route           type ref to yea_route
+      !PATH type STRING
+      !ROUTE type ref to YEA_ROUTE
     returning
-      value(returning) type ref to yea_service .
-  methods root
+      value(RETURNING) type ref to YEA_SERVICE .
+  methods ROOT
     returning
-      value(returning) type string .
+      value(RETURNING) type STRING .
+  methods TRACE
+    returning
+      value(RETURNING) type STRINGTAB .
 endinterface.

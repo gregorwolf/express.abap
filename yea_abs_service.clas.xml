@@ -27,6 +27,12 @@
      <LANGU>E</LANGU>
      <DESCRIPT>Table with Strings</DESCRIPT>
     </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_ABS_SERVICE</CLSNAME>
+     <CMPNAME>_TRACE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table with Strings</DESCRIPT>
+    </SEOCOMPOTX>
    </DESCRIPTIONS>
   </asx:values>
  </asx:abap>

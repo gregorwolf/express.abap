@@ -11,6 +11,26 @@
     <STATE>1</STATE>
     <UNICODE>X</UNICODE>
    </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_QUERY</CLSNAME>
+     <CMPNAME>GET</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get value of argument, e.g. ?arg1= 0 -&gt;get( &apos;arg1&apos; )</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_QUERY</CLSNAME>
+     <CMPNAME>HAS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check if argument is available e.g. ?dosomething,arg1=0</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_QUERY</CLSNAME>
+     <CMPNAME>LIST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get a list of all the arguments</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

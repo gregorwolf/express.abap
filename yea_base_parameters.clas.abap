@@ -63,9 +63,6 @@ CLASS YEA_BASE_PARAMETERS IMPLEMENTATION.
 
 
   method YEA_PARAMETERS~LIST.
-    data params type stringtab.
-    loop at _params assigning field-symbol(<p>).
-      append <p>-value to returning.
-    endloop.
+    returning = me->_params.
   endmethod.
 ENDCLASS.

@@ -1,16 +1,18 @@
-interface yea_parameters
+interface YEA_PARAMETERS
   public .
-  methods get
+
+
+  methods GET
     importing
-      !parameter       type string
+      !PARAMETER type STRING
     returning
-      value(returning) type string .
-  methods has
+      value(RETURNING) type STRING .
+  methods HAS
     importing
-      !parameter       type string
+      !PARAMETER type STRING
     returning
-      value(returning) type abap_bool .
-  methods list
+      value(RETURNING) type ABAP_BOOL .
+  methods LIST
     returning
-      value(returning) type stringtab .
+      value(RETURNING) type YEA_KEY_VALUES .
 endinterface.

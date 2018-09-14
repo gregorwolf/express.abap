@@ -55,4 +55,9 @@ CLASS YEA_BASE_QUERY IMPLEMENTATION.
     catch cx_root.
     endtry.
   endmethod.
+
+
+  method yea_query~list.
+    returning = _keys.
+  endmethod.
 ENDCLASS.

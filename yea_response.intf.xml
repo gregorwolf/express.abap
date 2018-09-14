@@ -11,6 +11,50 @@
     <STATE>1</STATE>
     <UNICODE>X</UNICODE>
    </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_RESPONSE</CLSNAME>
+     <CMPNAME>END</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>(I forget)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_RESPONSE</CLSNAME>
+     <CMPNAME>FINISHED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>(I forget)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_RESPONSE</CLSNAME>
+     <CMPNAME>REDIRECT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Redirect the requester to another location</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_RESPONSE</CLSNAME>
+     <CMPNAME>SEND_FILE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Sends &apos;application/base64&apos; HTTP response</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_RESPONSE</CLSNAME>
+     <CMPNAME>SEND_JSON</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Sends &apos;application/json&apos; HTTP response</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_RESPONSE</CLSNAME>
+     <CMPNAME>SEND_TEXT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Sends &apos;text/plain&apos; HTTP response</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>YEA_RESPONSE</CLSNAME>
+     <CMPNAME>SET_STATUS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set the HTTP status of the response</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
   </asx:values>
  </asx:abap>
 </abapGit>

@@ -1,9 +1,11 @@
-interface yea_route
+interface YEA_ROUTE
   public .
-  methods execute
+
+
+  methods EXECUTE
     importing
-      !request         type ref to yea_request
-      !response        type ref to yea_response
+      !REQUEST type ref to YEA_REQUEST
+      !RESPONSE type ref to YEA_RESPONSE
     returning
-      value(returning) type abap_bool .
+      value(RETURNING) type ABAP_BOOL .
 endinterface.
